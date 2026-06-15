@@ -171,9 +171,19 @@ button.equal:hover {
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    min-height: 440px; 
+    max-height: 440px;
+    height: fit-content;
     box-sizing: border-box;
     transition: background-color 0.3s, border 0.3s;
+}
+
+#history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 260px;
+    overflow-y: auto;
+    margin-bottom: 15px; 
 }
 
 .history-card h3 {
@@ -182,16 +192,6 @@ button.equal:hover {
     padding-bottom: 10px;
     font-size: 18px;
     margin-bottom: 10px;
-}
-
-#history-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-height: 320px; 
-    overflow-y: auto;
-    flex-grow: 1;
-    margin-bottom: 15px; 
 }
 
 #history-list li {

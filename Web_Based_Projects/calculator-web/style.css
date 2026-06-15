@@ -171,19 +171,19 @@ button.equal:hover {
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    max-height: 440px;
-    height: fit-content;
+    height: 440px; 
     box-sizing: border-box;
     transition: background-color 0.3s, border 0.3s;
+    overflow: hidden;
 }
 
 #history-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: 260px;
+    height: calc(100% - 80px);
     overflow-y: auto;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 
 .history-card h3 {

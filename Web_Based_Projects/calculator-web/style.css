@@ -148,15 +148,19 @@ button.equal:hover {
     background-color: #d62217;
 }
 
-/* Gaya untuk Kotak Definisi di Bawah */
+/* Gaya untuk Kotak Definisi di Bawah - Dengan Efek Glow yang Sama */
 .definition-card {
+    background-color: #1e1e24; /* Samakan warna background dengan kalkulator */
     max-width: 650px;
     margin: 30px auto 0 auto; /* Memberi jarak dari kalkulator di atasnya */
-    padding: 15px 20px;
-    background-color: #16161a;
-    border-radius: 12px;
-    border-left: 4px solid #25d366; /* Garis aksen hijau neon di sebelah kiri */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding: 25px; /* Sesuaikan padding agar terlihat lebih elegan */
+    border-radius: 20px; /* Samakan radius dengan kalkulator */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Samakan border */
+    
+    /* --- FITUR BARU: GLOW HIJAU --- */
+    box-shadow: 0px 0px 30px rgba(37, 211, 102, 0.2); /* Glow hijau tipis yang sama persis */
+    
+    /* Perhatikan: Garis aksen kiri dihapus untuk konsistensi */
 }
 
 .definition-card p {
@@ -168,13 +172,4 @@ button.equal:hover {
 
 .definition-card strong {
     color: #25d366; /* Membuat judul mini "Apa itu Kalkulator?" berwarna hijau neon */
-}
-
-/* Mengatur jalannya susunan komponen dari atas ke bawah */
-.main-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* Jarak antara container atas dan kotak definisi di bawahnya */
 }

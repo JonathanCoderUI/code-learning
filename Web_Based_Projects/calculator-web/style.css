@@ -9,6 +9,14 @@ body {
     color: white;
 }
 
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
 .container {
     display: flex;
     gap: 30px;
@@ -16,12 +24,11 @@ body {
     justify-content: center;
 }
 
-/* Kalkulator dengan Efek Neon Glow */
 .calculator {
     background-color: #1e1e24;
     padding: 25px;
     border-radius: 20px;
-    box-shadow: 0px 0px 30px rgba(37, 211, 102, 0.2); /* Glow hijau tipis */
+    box-shadow: 0px 0px 30px rgba(37, 211, 102, 0.2);
     width: 340px;
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -31,7 +38,7 @@ body {
     height: 70px;
     background-color: #111115;
     border: none;
-    color: #25d366; /* Angka warna hijau neon gokil */
+    color: #25d366;
     text-align: right;
     padding: 15px;
     font-size: 32px;
@@ -60,7 +67,6 @@ button {
     transition: all 0.1s ease;
 }
 
-/* Efek Animasi Klik Magnitudo/Partikel kecil saat ditekan */
 button:active {
     transform: scale(0.92);
     background-color: #444455;
@@ -84,7 +90,7 @@ button.operator:hover {
 button.equal {
     background-color: #25d366;
     color: white;
-    grid-column: span 2; /* Mengubah layout jadi melebar kesamping */
+    grid-column: span 2;
 }
 
 button.equal:hover {
@@ -92,7 +98,7 @@ button.equal:hover {
     box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
 }
 
-/* Panel Riwayat */
+/* --- REVISI KOTAK RIWAYAT --- */
 .history-card {
     background-color: #1e1e24;
     width: 280px;
@@ -101,9 +107,8 @@ button.equal:hover {
     border: 1px solid rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
-    
-    /* --- TAMBAHKAN INI (Jika belum ada) --- */
-    min-height: 380px; /* Menjaga tinggi kotak riwayat agar sejajar dengan kalkulator */
+    min-height: 440px; /* Dinaikkan agar sejajar sempurna dengan tinggi kalkulator */
+    box-sizing: border-box;
 }
 
 .history-card h3 {
@@ -111,18 +116,18 @@ button.equal:hover {
     border-bottom: 1px solid #333;
     padding-bottom: 10px;
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
+/* --- REVISI LIST RIWAYAT --- */
 #history-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: 280px; 
+    max-height: 320px; /* Melar ke bawah dari 280px agar muat lebih banyak data */
     overflow-y: auto;
     flex-grow: 1;
-    
-    /* --- TAMBAHKAN INI --- */
-    margin-bottom: 10px; /* Memberi ruang napas tipis sebelum tombol Hapus Riwayat */
+    margin-bottom: 15px; /* Jarak aman sebelum tombol merah */
 }
 
 #history-list li {
@@ -139,7 +144,7 @@ button.equal:hover {
     text-align: center;
     color: #666;
     font-family: inherit;
-    margin-top: 50px;
+    margin-top: 100px; /* Diturunkan sedikit biar pas di tengah kotak baru */
     border: none;
 }
 
@@ -148,27 +153,26 @@ button.equal:hover {
     font-size: 14px;
     background-color: #ff3b30;
     border-radius: 8px;
-    
-    /* --- REVISI DI SINI --- */
-    margin-top: auto; /* Memaksa tombol turun ke posisi paling bawah */
+    margin-top: auto; /* Tetap mengunci tombol di dasar kartu */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
 }
+
 .clear-history-btn:hover {
     background-color: #d62217;
 }
 
-/* Gaya untuk Kotak Definisi di Bawah - Dengan Efek Glow yang Sama */
 .definition-card {
-    background-color: #1e1e24; /* Samakan warna background dengan kalkulator */
+    background-color: #1e1e24;
     max-width: 650px;
-    margin: 30px auto 0 auto; /* Memberi jarak dari kalkulator di atasnya */
-    padding: 25px; /* Sesuaikan padding agar terlihat lebih elegan */
-    border-radius: 20px; /* Samakan radius dengan kalkulator */
-    border: 1px solid rgba(255, 255, 255, 0.05); /* Samakan border */
-    
-    /* --- FITUR BARU: GLOW HIJAU --- */
-    box-shadow: 0px 0px 30px rgba(37, 211, 102, 0.2); /* Glow hijau tipis yang sama persis */
-    
-    /* Perhatikan: Garis aksen kiri dihapus untuk konsistensi */
+    margin: 30px auto 0 auto;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 0px 30px rgba(37, 211, 102, 0.2);
 }
 
 .definition-card p {
@@ -179,5 +183,5 @@ button.equal:hover {
 }
 
 .definition-card strong {
-    color: #25d366; /* Membuat judul mini "Apa itu Kalkulator?" berwarna hijau neon */
+    color: #25d366;
 }
